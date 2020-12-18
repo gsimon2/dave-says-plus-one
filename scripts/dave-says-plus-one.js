@@ -22,14 +22,14 @@ Hooks.on('createChatMessage', (app) => {
             }
             CONFIG.ChatMessage.entityClass.create(chatData);
         }
-    }
 
-    if (app.data && app.data.content && activationKeys.some(ak => app.data.content.toLowerCase().includes(ak))) {
-        isDaveDancing = !isDaveDancing;
-        let chatData = {
-            "user": game.user._id,
-            "content": isDaveDancing ? 'Dance party activated!' : 'No more dance party'
+        if (app.data && app.data.content && activationKeys.some(ak => app.data.content.toLowerCase().includes(ak))) {
+            isDaveDancing = !isDaveDancing;
+            let chatData = {
+                "user": game.user._id,
+                "content": isDaveDancing ? 'Dance party activated!' : 'No more dance party'
+            }
+            CONFIG.ChatMessage.entityClass.create(chatData);
         }
-        CONFIG.ChatMessage.entityClass.create(chatData);
     }
 });
