@@ -1,6 +1,6 @@
-let isDaveDancing = false;
+let isInspireCourageActive = false;
 const searchTextArray = ['strike', 'attack', 'damage'];
-const activationKeys = ['dance-party', 'danceparty'];
+const activationKeys = ['dance-party', 'danceparty', 'ising'];
 
 Hooks.on('init', () => {
     game.settings.register("dave-says-plus-one", "addOne", {
@@ -15,7 +15,7 @@ Hooks.on('init', () => {
 
 Hooks.on('createChatMessage', (app) => {
     if (game.settings.get('dave-says-plus-one', 'addOne')) {
-        if(isDaveDancing && app.data.flavor && searchTextArray.some(text => app.data.flavor.toLowerCase().includes(text))) {
+        if(isInspireCourageActive && app.data.flavor && searchTextArray.some(text => app.data.flavor.toLowerCase().includes(text))) {
             let chatData = {
                 "user": game.user._id,
                 "content": "<b>Dave says plus one!</b>"
@@ -24,10 +24,10 @@ Hooks.on('createChatMessage', (app) => {
         }
 
         if (app.data && app.data.content && activationKeys.some(ak => app.data.content.toLowerCase().includes(ak))) {
-            isDaveDancing = !isDaveDancing;
+            isInspireCourageActive = !isInspireCourageActive;
             let chatData = {
                 "user": game.user._id,
-                "content": isDaveDancing ? 'Dance party activated!' : 'No more dance party'
+                "content": isInspireCourageActive ? 'Inspire courage activated! 🎶' : 'No more inspire courage 😒'
             }
             CONFIG.ChatMessage.entityClass.create(chatData);
         }
