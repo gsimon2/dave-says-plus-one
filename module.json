@@ -1,0 +1,12 @@
+{
+    "name": "dave-says-plus-one",
+    "title": "Dave says plus one",
+    "description": "",
+    "author": "GS",
+    "version": "0.0.1",
+    "download": "",
+    "url": "https://github.com/gsimon2/dave-says-plus-one",
+    "minimumCoreVersion": "0.7.0",
+    "scripts": ["scripts/dave-says-plus-one.js"]
+    
+  }
