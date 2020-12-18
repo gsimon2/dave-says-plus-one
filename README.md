@@ -1,6 +1,6 @@
 # Dave Says Plus One
 
-A simple module for [FoundryVtt](https://foundryvtt.com/) to enable reminds in chat for adding Inspire Courage bonus.
+A simple module for [FoundryVtt](https://foundryvtt.com/) to enable reminders in chat for adding Inspire Courage bonus.
 
 Adds a config to the module settings menu to enable / disable this module.
 
