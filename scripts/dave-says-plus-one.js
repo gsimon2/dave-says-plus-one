@@ -32,7 +32,7 @@ Hooks.on('createChatMessage', (msg) => {
         if (msg.data
             && msg.data.content
             && inspireCourageKeys.some(ak => msg.data.content.toLowerCase().includes(ak))
-            && messageUser.name === gameUser.name
+            && messageUser._id === gameUser._id
         ) {
             isInspireCourageActive = !isInspireCourageActive;
             let chatData = {
