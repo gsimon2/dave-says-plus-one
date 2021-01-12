@@ -1,6 +1,6 @@
 let isInspireCourageActive = false;
 const searchTextArray = ['strike', 'attack', 'damage'];
-const inspireCourageKeys = ['/dance-party', '/danceparty', '/ising'];
+const inspireCourageKeys = ['dance-party', 'danceparty', 'ising'];
 
 Hooks.on('init', () => {
     game.settings.register("dave-says-plus-one", "addOne", {
